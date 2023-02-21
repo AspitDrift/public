@@ -3,8 +3,8 @@ Start-Transcript
 $Errors = 0;
 
 $ComputerInfo = Get-ComputerInfo
-if(-not ($ComputerInfo.WindowsProductName -like 'Windows 11')){
-    Write-Host 'This script only applies to Windows 11. You are running ' + $ComputerInfo.WindowsProductName
+if(-not ($ComputerInfo.WindowsProductName -like "Windows 11*")){
+    Write-Host 'This script only applies to Windows 11. You are running' $ComputerInfo.WindowsProductName
     return 0
 }
 
